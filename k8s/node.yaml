@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nrlabs-node
+spec:
+  containers:
+  - name: nrlabs-node
+    image: nrlabs/node-cache
+    imagePullPolicy: Never

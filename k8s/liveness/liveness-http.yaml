@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nrlabs-liveness-http
+spec:
+  containers:
+  - name: liveness-http
+    image: nrlabs/node-cache
+    imagePullPolicy: Never
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 5

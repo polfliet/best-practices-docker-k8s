@@ -1,0 +1,2 @@
+docker container run -p 40001:8080 -d nrlabs/node-base
+docker container run -it --rm nrlabs/node-alpine /bin/sh

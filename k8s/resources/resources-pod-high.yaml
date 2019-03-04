@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nrlabs-resources-pod-high
+spec:
+  containers:
+  - name: nrlabs-resources-pod-high
+    image: nrlabs/node-cache
+    imagePullPolicy: Never
+    resources:
+        requests:
+            memory: "2000Mi"
+            cpu: "2000m"
+        limits:
+            memory: "4000Mi"
+            cpu: "4000m"

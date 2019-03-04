@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nrlabs-deployment
+  labels:
+    app: nodejs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs
+  template:
+    metadata:
+      labels:
+        app: nodejs
+    spec:
+      containers:
+      - name: nodejs
+        image: nrlabs/node-cache
+        imagePullPolicy: Never
+        resources:
+            requests:
+                memory: "100Mi"
+                cpu: "500m"
+            limits:
+                memory: "500Mi"
+                cpu: "1000m"

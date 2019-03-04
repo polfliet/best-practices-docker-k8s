@@ -1,0 +1,15 @@
+{
+  "name": "docker_best_practices",
+  "version": "1.0.0",
+  "description": "Best practices example",
+  "author": "Stijn Polfliet <spolfliet@newrelic.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "npx eslint ."
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "private": true
+}
